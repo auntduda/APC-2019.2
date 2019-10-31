@@ -2,29 +2,18 @@
 
 int main(){
 
-    int x, num, i=0, anterior=-10000000, maior=0, menor=0;
+    float j, c, i, t;
 
-    scanf("%d", &x);
+    int aux;
 
-    while(i < x){
-        scanf("%d", &num);
+    do{
+        scanf("%f %f %f %d", &c, &i, &t, &aux);
 
-        if(anterior < num){
-            maior = num;
-            menor = anterior;
-        }
+        j = c * i * t;
 
-        else{
-            maior = anterior;
-            menor = num;
-        }
+        printf("Juros a ser pago: %d\n", j);
 
-        anterior = num;
-
-        i++;
-    }
-
-    printf("%d %d\n", menor, maior);
+    }while(aux != 0);
 
     return 0;
 
